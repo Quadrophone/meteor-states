@@ -1,0 +1,28 @@
+
+<template name="countrySelect">
+    
+    <select name="country_selector" class="country-selector" id="country-selector">
+       
+        <option value="" default disabled selected>Select Country</option>
+
+        {{#each countries}}
+            <option data-filename="{{this.filename}}" value="{{this.code}}">{{this.name}}</option>;
+        {{/each}}
+
+    </select>
+
+</template>
+
+<template name="stateSelect">
+
+    <select name="state_selector" class="state-selector" id="state-selector">
+     
+        <option value="" default disabled selected>Select Province / State</option>
+       
+        {{#each states}}
+            <option value="{{this.code}}">{{this.name}}</option>
+        {{/each}}
+
+    </select>
+
+</template>
